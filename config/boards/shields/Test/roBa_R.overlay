@@ -5,23 +5,20 @@
 };
 
 &kscan0 {
-    col-gpios
-        = <&xiao_d 10 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 9 GPIO_ACTIVE_HIGH> 
-        , <&xiao_d 8 GPIO_ACTIVE_HIGH> 
-        , <&xiao_d 7 GPIO_ACTIVE_HIGH> 
-        , <&gpio0 10 GPIO_ACTIVE_HIGH>
-        ;
-
-    debounce-press-ms = <15>;      // 押した瞬間のデバウンス（15ms）
-    debounce-release-ms = <15>;    // 離した瞬間のデバウンス（15ms）
-    polling-interval-ms = <10>;    // キースキャンの間隔（10ms）
+        col-gpios
+            = <&xiao_d 10 GPIO_ACTIVE_HIGH>
+            , <&xiao_d 9 GPIO_ACTIVE_HIGH> 
+            , <&xiao_d 8 GPIO_ACTIVE_HIGH> 
+            , <&xiao_d 7 GPIO_ACTIVE_HIGH> 
+            , <&gpio0 10 GPIO_ACTIVE_HIGH>
+            ;
 };
 
- / {
+/ {
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
+
     };
 };
 
@@ -64,3 +61,5 @@
         scroll-layers = <5>;
     };
 };
+
+
